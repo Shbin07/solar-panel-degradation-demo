@@ -1,0 +1,30 @@
+# Solar Panel Degradation Modeling Demo (LEO)
+
+Mini demo for the project:
+**Solar Panel Degradation Modeling for LEO Satellites**
+
+## Description
+This demo implements a simplified solar array degradation model that combines:
+- a constant yearly aging term
+- an altitude-dependent radiation degradation proxy
+
+The model computes the relative solar array power (P/P0) over a 10-year mission
+for different Low Earth Orbit (LEO) altitudes.
+
+## Model assumptions
+- Constant degradation: 0.5% per year
+  (represents combined effects such as UV exposure and atomic oxygen)
+- Radiation degradation increases with altitude:
+  - lower at 400 km
+  - higher at 700 km
+- The model is intentionally simplified and intended as a demonstration.
+
+## Technologies used
+- Python 3
+- NumPy for numerical computation
+- Matplotlib for plotting
+
+## How to run
+```bash
+pip install -r requirements.txt
+python src/degradation.py
